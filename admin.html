@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex">
+<title>แอดมินเครดิต</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Noto+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="panel" id="loginBox">
+    <h2>เข้าสู่ระบบแอดมิน</h2>
+    <label for="em">อีเมล</label><input id="em" type="email" autocomplete="username">
+    <label for="pw">รหัสผ่าน</label><input id="pw" type="password" autocomplete="current-password">
+    <div class="row"><button class="btn primary" id="login">เข้าสู่ระบบ</button></div>
+  </div>
+  <div id="app" hidden>
+    <div class="panel">
+      <h2>เพิ่มเครดิตใหม่</h2>
+      <p class="note">เลือกรูปสกรีนช็อต แล้วลากบนรูปเพื่อเบลอชื่อ รูปโปรไฟล์ เบอร์โทร เลขบัญชี ส่วนที่เบลอจะถูกแปลงเป็นพิกเซลในตัวรูปจริง กู้คืนไม่ได้</p>
+      <input type="file" id="file" accept="image/*">
+      <canvas id="cv"></canvas>
+      <div class="row"><button class="btn" id="undo">ย้อนกรอบเบลอล่าสุด</button></div>
+      <label for="fname">ชื่อจริงลูกค้า (ชื่อต้นเท่านั้น)</label><input id="fname" placeholder="เช่น สมชาย">
+      <label for="fdate">วันที่ในคอมเมนต์</label><input type="date" id="fdate">
+      <label for="fcred">จำนวนเครดิต</label><input type="number" id="fcred" value="1" min="1">
+      <label for="ftag">แท็ก</label>
+      <select id="ftag"><option>ซื้อซ้ำ</option><option>นัดรับ</option><option>ส่งของ</option><option>ลูกค้าใหม่</option></select>
+      <div class="row"><button class="btn primary" id="save">บันทึกเครดิต</button><button class="btn" id="logout">ออกจากระบบ</button></div>
+      <p class="note" id="count"></p>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+<script type="module" src="admin.js"></script>
+</body>
+</html>

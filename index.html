@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>เครดิตร้าน ZEMBAE</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Noto+Sans+Thai:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <div class="top"><button class="chip" id="theme" aria-pressed="false">สลับโหมดสี</button></div>
+  <div class="hero">
+    <div>
+      <h1>เครดิตจากลูกค้าจริง<br>ทุกใบมีหลักฐาน</h1>
+      <p>ทุกรายการมาจากคอมเมนต์ในโพสต์เครดิตของร้าน กดดูรูปแล้วกดไปตรวจที่โพสต์ต้นฉบับได้เอง</p>
+    </div>
+    <div class="big"><span id="total">0</span><small>เครดิตทั้งหมด</small></div>
+  </div>
+  <div class="seller">
+    <div class="av" aria-hidden="true">N</div>
+    <div>
+      <h2>เครดิตของแม่ค้า <a href="https://www.facebook.com/nutta.sett" target="_blank" rel="noopener">Nuttanicha Settakarnsuk</a></h2>
+      <p class="sub">บัญชี Facebook ผู้ขาย (ณัฏฐณิชา) โพสต์เครดิตเมื่อ 24 มกราคม 2025 รับกดสินค้า Roblox และ 2Hand</p>
+      <div class="badges">
+        <span class="badge key">รับโอนเฉพาะบัญชีชื่อ ณัฏฐณิชา เท่านั้น</span>
+        <span class="badge key">มี LINE เดียว ระวังมิจฉาชีพ</span>
+        <span class="badge">นัดรับได้</span><span class="badge">ส่งพัสดุกลางได้</span>
+      </div>
+    </div>
+  </div>
+  <div class="bar">
+    <div id="chips"></div><span class="grow"></span>
+    <a class="src" href="https://www.facebook.com/nutta.sett/posts/pfbid02eUGGXvkxy1V3T11FxTjcGsoxLMnKpsa7wZZUv4Rm1sKniUtxq3WpbVLsyFMnZL2Yl" target="_blank" rel="noopener">ดูโพสต์ต้นฉบับบน Facebook</a>
+  </div>
+  <div class="grid" id="grid"></div>
+  <button class="btn more" id="more" hidden>โหลดเพิ่ม</button>
+</div>
+<dialog id="dlg"><img id="big" alt="รูปหลักฐานเครดิต"><div class="cap" id="cap"></div></dialog>
+<script type="module" src="app.js"></script>
+</body>
+</html>

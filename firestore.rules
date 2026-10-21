@@ -1,0 +1,13 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{col}/{id} {
+      // ทุกคนอ่านได้ (หน้าเว็บสาธารณะ)
+      allow read: if col in ['credits','images','meta'];
+      // เขียนได้เฉพาะอีเมลของ ZEMBAE ที่ล็อกอินแล้วเท่านั้น
+      allow write: if request.auth != null
+        && request.auth.token.email == 'YOUR_EMAIL@example.com'
+        && col in ['credits','images','meta'];
+    }
+  }
+}
